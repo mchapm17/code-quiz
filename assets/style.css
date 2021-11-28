@@ -1,0 +1,40 @@
+html {
+  margin: 0 0 0.5rem;
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+  font-size: x-large;
+  padding-bottom: 50px;
+}
+
+main {
+  margin: 3rem auto;
+  max-width: 90vw;
+  width: 50ch;
+}
+
+.letter {
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  padding: 2px;
+  margin: 2px;
+  display: inline-block;
+}
+
+.letter-button {
+  margin: 0.25rem;
+  font-size: 1.25rem;
+}

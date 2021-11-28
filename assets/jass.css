@@ -1,4 +1,19 @@
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+.btn {
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  justify-content: center;
+  flex: auto;
+  background-color: #b83ffd;
+}
+.btn.btn-lg {
+  font-size: 1.25rem;
+  padding: 8px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
