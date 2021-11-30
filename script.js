@@ -1,7 +1,7 @@
-var startEl = document.querySelector('#start');
-var quizEl = document.querySelector('#quiz');
+var startEl = document.querySelector('#START');
+var quizEl = document.querySelector('#QUIZ');
 var quizOptionsEl = document.querySelector('#quiz article');
-var scoreEl = document.querySelector('#score');
+var scoreEl = document.querySelector('#SCORE');
 var startBtn = document.querySelector('startBtn');
 var quizH2 = document.querySelector('#quizH2');
 var quizH3 = document.querySelector('#quizH3');
