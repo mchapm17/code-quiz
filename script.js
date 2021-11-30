@@ -157,17 +157,17 @@ quizH3.addEventListener("click", nextQuestion);
 quizEl.addEventListener("click", pickAnswer);
 
 init();
-var secondsLeft = 30;
+//var secondsLeft = 30;
 
-function setTime() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft + " seconds left till next question.";
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval);
-      nextQuestion();
-    }
-  }, 1000);
-}
+//function setTime() {
+  //var timerInterval = setInterval(function() {
+    //secondsLeft--;
+    //timeEl.textContent = secondsLeft + " seconds left till next question.";
+    //if(secondsLeft === 0) {
+      //clearInterval(timerInterval);
+      //nextQuestion();
+    //}
+  //}, 1000);
+//}
 
-  setTime();
+  //setTime();
