@@ -3,20 +3,54 @@
 
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
-    <link rel="stylesheet" type="text/css" href="./assets/jass.css">
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      main > section {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body>
     <main>
-      <h1>Coding Quiz</h1>
-      <hr>
-      </main>
-    <section>
-      This coding quiz is a brief assesment of your knowledge of JavaScript.
-    </section>
-    <button type="button" class="btn btn-start-quiz btn-lg">Start Quiz</button>
+      <header>
+        <h1>Coding Quiz</h1>
+      </header>
+      <section id="start">
+        <h2>START</h2>
+        <button id="startBtn">Start</button>
+      </section>
+      <section id="quiz">
+        <h2>QUIZ</h2>
+        <h3></h3>
+      <article></article>
+      </section>
+      <section id="score">
+      <h2>SCORE</h2>
+      <form>
+        <label for="initials">
+          Initials:
+        </label>
+        <input id="initials" maxlength="3" />
+        <button type="submit">Submit Score</button>
+      </form>
+      </section>
+    
 
-   <script type="text/javascript" src="app.js></script>
+    </main>
+    
+   <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
