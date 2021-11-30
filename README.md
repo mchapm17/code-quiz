@@ -15,4 +15,4 @@
 ![Code Quiz Start Screen]()
 
 ## FInished Product
-[Finished product](https://mchapm17.github.io/seo-refactor-project/)
+[Finished product](https://mchapm17.github.io/code-quiz/)
