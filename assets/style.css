@@ -38,3 +38,7 @@ main {
   margin: 0.25rem;
   font-size: 1.25rem;
 }
+article {
+  justify-content: center;
+  flex: auto;
+}

@@ -1,11 +1,14 @@
 var startEl = document.querySelector('#START');
 var quizEl = document.querySelector('#QUIZ');
-var quizOptionsEl = document.querySelector('#quiz article');
 var scoreEl = document.querySelector('#SCORE');
-var startBtn = document.querySelector('startBtn');
-var quizH2 = document.querySelector('#quizH2');
-var quizH3 = document.querySelector('#quizH3');
-var timeEl = document.querySelector(".time");
+
+var startBtn = document.querySelector('#startBtn');
+
+var quizQuestion = document.querySelector('#quizQuestion');
+var quizAnswers = document.querySelector('#quizAnswers');
+//var quizH2 = document.querySelector('#quizH2');
+
+//var timeEl = document.querySelector(".time");
 
 var cursor = 0;
 
@@ -17,16 +20,16 @@ var questions = [
     "a set of shortcuts",
     "a set of files for storage"
   ],
-  correct: 1
+  correct: 0
 },
 { text: "JavaScript allows a developer to create?",
   possible: [
     "images",
     "interactive elements",
     "websites",
-    "background colors"
+    "all of the above"
   ],
-  correct: 2
+  correct: 3
 },
 { text: "CSS is used for?",
   possible: [
@@ -35,7 +38,7 @@ var questions = [
     "font sizes",
     "all of the above"
   ],
-  correct: 4
+  correct: 3
 },
 { text: "CSS stands for?",
   possible: [
@@ -44,7 +47,7 @@ var questions = [
     "Cascading Style Sheet",
     "Computer Style Sheet"
   ],
-  correct: 3
+  correct: 2
 },
 { text: "Padding is?",
   possible: [
@@ -53,7 +56,7 @@ var questions = [
     "area around the border",
     "the outline of an image"
   ],
-  correct: 2
+  correct: 1
 },
 { text: "An array is",
   possible: [
@@ -62,16 +65,16 @@ var questions = [
     "a set of conditions",
     "a container that holds variables"
   ],
-  correct: 4
+  correct: 3
 },
 { text: "HTML is?",
   possible: [
-    "The skeloten of a website",
+    "Hyper Text Markup Language",
     "the design elements of a website",
     "a type of image",
     "the design elements of a website"
   ],
-  correct: 1
+  correct: 0
 },
   
 ]
@@ -123,38 +126,34 @@ function nextQuestion() {
 }
 
 function renderQuestion() {
-  var currentQuestion = question[cursor];
+  var currentQuestion = questions[cursor];
   if (currentQuestion) {
-    quizH3.textContent = currentQuestion.text;
-    quizOptionsEl.innerHTML = "";
+    quizQuestion.textContent = currentQuestion.text;
+    quizAnswers.innerHTML = "";
     for (var i in currentQuestion.possible) {
-      var answerEl = document.createElement('div');
+      var answerEl = document.createElement('button');
       answerEl.textContent = currentQuestion.possible[i];
       answerEl.dataset.index = i;
-      quizOptionsEl.appendChild(answerEl);
+      quizAnswers.appendChild(answerEl);
     }
   } else {
     enterScore();
   }
 }
 
-function pickAnswer(event) {
-  var currentQuestion = question[cursor];
-  if (event.target.matches("div")) {
-    if (Number(event.target.dataset.index === currentQuestion.correct)) {
-      console.log("CORRECT");
-    } else {
-      console.log("WRONG");
-    }
+function pickAnswers(event) {
+  var correctIndex = questions[cursor].correct;
+  var answer = questions[cursor].possible[correctIndex];
+  if (event.target.type === "submit"){
+    console.log(event.target.textContent,answer)
   }
 }
 
 
 
 startBtn.addEventListener("click", playQuiz);
-quizH2.addEventListener("click", enterScore);
-quizH3.addEventListener("click", nextQuestion);
-quizEl.addEventListener("click", pickAnswer);
+//quizH3.addEventListener("click", nextQuestion);
+quizAnswers.addEventListener("click", pickAnswers);
 
 init();
 //var secondsLeft = 30;
